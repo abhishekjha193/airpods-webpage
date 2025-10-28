@@ -1,0 +1,128 @@
+@media (max-width: 930px) {
+  main{
+       //section1
+        .section1{
+            nav{
+                .up{
+                padding: .8rem 4rem;
+                gap: 40%;
+                .logo{
+                justify-content: start;
+                }
+                .mid{
+                h4{
+                display: none;
+                 }
+                }
+                .end{
+                gap: 1rem;
+                h6:nth-of-type(3){
+                display: block;
+                 }
+                }
+                }
+            }
+        }
+    }
+}
+
+//phone
+@media (max-width: 720px){
+     main{
+        //section1
+        .section1{
+            nav{
+                .up{
+                padding-left: 3rem;
+                gap: 40%;
+                .logo{
+                justify-content: start;
+                }
+                .mid{
+                h4{
+                display: none;
+                 }
+                }
+                .end{
+                flex-shrink: 0;
+                gap: 1rem;
+                h6:nth-of-type(3){
+                display: block;
+                 }
+                }
+                }
+            }
+        }
+
+        
+        .section{
+            //section 2,3,4
+            .section2,.section3,.section4{
+              .text{
+                left: 1rem;
+                bottom: 10%;
+                h1{
+                font-size: 2.5vmax;
+            }
+            h5{
+                font-size: 1vmax;
+            }
+            h6{
+                font-size: 1.2rem;
+                margin-top: .5rem;
+                font-weight: 100;
+            }
+              }
+              .button{
+             right: 1rem;
+             bottom: 5%;
+           }
+           }     
+            //section5  
+           .section5{
+            padding-bottom: 10rem;
+            .bottom{
+                padding: 0rem 1.4rem;
+            }
+        }
+
+        //section6
+        .section6{
+         flex-direction: column;
+         padding: 2rem 3rem;
+         .text{
+            
+            h5{
+                font-size: 2rem;
+            }
+            h1{
+                font-size: 2.5rem;
+            }
+         }
+         .image{
+            .d{
+             width: 15rem;
+             bottom: 0rem;
+            }
+            .up{
+             width: 15rem;
+            }
+         }
+        }
+
+        footer{
+        padding-top: 2rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        .up{
+            gap: 1rem;
+        }
+        }
+    
+        }
+
+        
+
+    }
+}
+

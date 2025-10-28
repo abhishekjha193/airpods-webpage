@@ -1,0 +1,214 @@
+@use 'scss/mixin';
+@use 'scss/global';
+@use 'scss/animation';
+
+main{
+    overflow: hidden;
+     .section1{
+       nav{
+        width: 100%;
+        .up{
+            position: relative;
+            width: 100%;
+            @include mixin.flex(row,center,space-between,nowrap);
+            padding: .8rem 17vw;
+            gap: 1rem;
+            .logo{
+            @include mixin.flex(row,center,center,nowrap);
+                width: 5%;
+            h5{
+                font-size: 1rem;
+            }
+            }
+            .mid{
+                width: 80%;
+            @include mixin.flex(row,center,space-between,nowrap);
+             h4{
+                font-size: .8rem;
+                font-weight: 200;
+            }
+            }
+            .end{
+            width: 15%;
+            @include mixin.flex(row,center,space-around,nowrap);
+             h6{
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            h6:nth-of-type(3){
+                display: none;
+            }
+            }
+        }
+        .down{
+            background-color: white;
+             @include mixin.flex(row,center,center,nowrap);
+             padding: 1rem;
+             overflow: hidden;
+             transform: scaleY(0);
+             animation-name: down;
+             animation-duration: 1s;
+             animation-iteration-count: 1;
+             animation-fill-mode: forwards;
+             h4{
+                font-size: .9rem;
+                font-weight: 100;
+             }
+        }
+       }
+    }
+    .section{
+     margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      
+    //section2
+    .section2 {
+      @include mixin.section;
+    }
+    
+    //section3
+    .section3 {
+       @include mixin.section;
+       color: white;
+        .button{
+            .a{
+                background-color: rgb(255, 255, 255);
+                color: rgb(7, 7, 7);
+                border-color: rgb(255, 255, 255);
+            }
+            .b{
+                color:  rgb(251, 251, 252);
+                background-color: transparent;
+                border-color: rgb(250, 251, 252);
+            }
+            .b:hover {
+                background-color: rgb(247, 245, 245);
+                color: rgb(7, 7, 7);
+            }
+        }
+    }
+    
+    //section4
+    .section4 {
+       @include mixin.section;
+       img{
+        border-radius:1rem;
+        object-fit: cover;
+        width: 100%;
+       }
+    }
+
+    //section5
+    .section5{
+        width: 100%;
+        background-color: white;
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        .top{
+            padding: 5rem 0rem;
+            @include mixin.flex(column,center,center,nowrap);
+            h1{
+           font-size: 4vmax
+        }
+        }
+        .bottom{
+            overflow: auto;
+            padding: 0rem 5rem;
+            gap: 2rem;
+            @include mixin.flex(row,center,0,nowrap);
+            .a{
+               @include mixin.bsection;
+            }
+            .b{
+                 @include mixin.bsection;
+            }
+            .c{
+                 @include mixin.bsection;
+            }
+            .d{
+                 @include mixin.bsection;
+            }
+            .e{
+                 @include mixin.bsection;
+            }
+        }
+        .bottom::-webkit-scrollbar{
+             display: none;
+             }
+    }
+    //section6
+    .section6{
+        position: relative;
+        width: 100%;
+        @include mixin.flex(row,center,center,nowrap);
+        gap: 5vw;
+        padding: 5rem 0rem;
+        .text{
+            h5{
+              font-size: 2vw;
+              font-weight: 500;
+            }
+            h1{
+             font-size: 3rem;
+            }
+
+        }
+        .image{
+            overflow: hidden;
+        @include mixin.flex(row,center,center,nowrap);
+            .d{
+           position: absolute;
+           width: 22vw;
+          bottom: 3rem;
+          border-radius: 1rem
+            }
+            .up{
+                width: 21vw;
+            }
+        }
+    }
+
+    footer{
+        width: 100%;
+        background-color: #FAFAFC;
+        padding: 6rem 15rem;
+        @include mixin.flex(column,center,center,nowrap);
+        .up{
+        @include mixin.flex(row,center,center,wrap); 
+        gap: 2vw;
+        .a,.b,.c,.d{
+        @include mixin.flex(column,center,center,wrap); 
+           h1{
+                font-size: 3rem;
+                font-weight: 100;
+            }
+            h5{
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+            h6{
+                font-size: 1rem;
+                font-weight: 100;
+            }
+        }
+        }
+        .mid{
+            width: 100%;
+            background-color: grey;
+            margin: 2rem;
+            height: .1vh
+        }
+        .down{
+            width: 100%;
+           @include mixin.flex(row,center,space-between,wrap); 
+        }
+    }
+    }
+    
+}
+
+@import 'scss/responsive';
